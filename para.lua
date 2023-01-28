@@ -87,7 +87,7 @@ menu.slider(menu.my_root(),"ragdoll type: [force ragdoll] ",{"ragty"},"",0,3,1,1
 end)
 --]]
  
- menu.hyperlink(menu.my_root(), "join discord", "https://discord.gg/UAkyMGQeYd", "")
+
  util.keep_running()
 
 

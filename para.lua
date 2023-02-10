@@ -1,5 +1,5 @@
 require"natives-1651208000"
-
+util.toast("test")
 floatt=0
       self11 = PLAYER.PLAYER_PED_ID()
       selfpos = ENTITY.GET_ENTITY_COORDS(self11,true)

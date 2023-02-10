@@ -69,7 +69,9 @@ elseif PAD.IS_CONTROL_PRESSED(0,61)  then --shi
 end
 
 
-
+menu.slider(menu.my_root(),"ragdoll type: [force ragdoll] ",{"ragty"},"",0,3,1,1,function(value_two)
+  ragdoll_type=value_two
+ end)
 
  menu.toggle_loop(menu.my_root(),"force ragdoll",{},"",function(on)
 
@@ -81,6 +83,20 @@ end
   PED.SET_PED_TO_RAGDOLL(PLAYER.PLAYER_PED_ID(), 2000, 2000, ragdoll_type,true , true , true )
 
  end)
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
 
  
  

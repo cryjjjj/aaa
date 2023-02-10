@@ -27,7 +27,7 @@ auto_updater.run_auto_update({
   verify_file_begins_with="--"
 })
 
-util.toast("iii")
+util.toast("i")
 require"natives-1651208000"
 floatt=0
       self11 = PLAYER.PLAYER_PED_ID()

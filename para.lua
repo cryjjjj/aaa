@@ -27,7 +27,7 @@ auto_updater.run_auto_update({
   script_relpath=SCRIPT_RELPATH,
   verify_file_begins_with=""
 })
-util.toast("aaaa")
+
 floatt=0
       self11 = PLAYER.PLAYER_PED_ID()
       selfpos = ENTITY.GET_ENTITY_COORDS(self11,true)
@@ -83,49 +83,4 @@ menu.slider(menu.my_root(),"ragdoll type: [force ragdoll] ",{"ragty"},"",0,3,1,1
   PED.SET_PED_TO_RAGDOLL(PLAYER.PLAYER_PED_ID(), 2000, 2000, ragdoll_type,true , true , true )
 
  end)
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
-
-
-
-
-
-
-
-
-
-
+  

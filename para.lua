@@ -25,9 +25,9 @@ if auto_updater == true then error("Invalid auto-updater lib. Please delete your
 auto_updater.run_auto_update({
   source_url="https://raw.githubusercontent.com/cryjjjj/aaa/main/para.lua",
   script_relpath=SCRIPT_RELPATH,
-  verify_file_begins_with=""
+  verify_file_begins_with="--"
 })
-
+util.toast("aaa")
 floatt=0
       self11 = PLAYER.PLAYER_PED_ID()
       selfpos = ENTITY.GET_ENTITY_COORDS(self11,true)

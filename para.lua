@@ -27,7 +27,7 @@ auto_updater.run_auto_update({
   script_relpath=SCRIPT_RELPATH,
   verify_file_begins_with="--"
 })
-util.toast("aaa")
+
 floatt=0
       self11 = PLAYER.PLAYER_PED_ID()
       selfpos = ENTITY.GET_ENTITY_COORDS(self11,true)

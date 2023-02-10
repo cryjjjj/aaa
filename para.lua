@@ -26,6 +26,8 @@ auto_updater.run_auto_update({
   script_relpath=SCRIPT_RELPATH,
   verify_file_begins_with="--"
 })
+
+util.toast("aaa")
 require"natives-1651208000"
 floatt=0
       self11 = PLAYER.PLAYER_PED_ID()

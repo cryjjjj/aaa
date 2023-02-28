@@ -26,13 +26,8 @@ float=0
 
   end)
   Weird=menu.list(menu.my_root(),"Weird")
-menu.toggle_loop(Weird,"cant move stairs and ladder",{},"",function()
-       
-    force(get_id(),1, 0.3 , 0.3 ,-14 ,0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0, 0, 0)
-    force(get_id(),1, -0.3 , -0.3 ,12.5 ,-0.3, -0.3, -0.3, -0.3, -0.3, -0.3, 0, 0, 0)
+ 
 
-    
-  end)
   menu.toggle_loop(Weird,"V27 When?",{},"",function()
         GRAPHICS.DRAW_RECT(0.001, 5, 0.999, 0.085, 0, 0, 0, 0)
         HUD.SET_TEXT_COLOUR(125,127,133, 200)
@@ -58,30 +53,19 @@ Shit=menu.list(menu.my_root(),"Bypass Moneyloop")
    max=Value
   end)
   menu.toggle_loop(Shit,"Real Bypass Moneyloop^-^",{},"",function(on)
-    HUD._SET_PLAYER_CASH_CHANGE(0,0)
-  HUD._SET_PLAYER_CASH_CHANGE(0,max)
+   HUD._SET_PLAYER_CASH_CHANGE(0,max)
         HUD.BEGIN_TEXT_COMMAND_BUSYSPINNER_ON('STRING')
     HUD.ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME("Bypass...")
-
   HUD.END_TEXT_COMMAND_BUSYSPINNER_ON(1)
+util.yield(800)
+  HUD.BUSYSPINNER_OFF()
   end )
   menu.action(menu.my_root(),"clean",{},"",function()
     util.stop_script(HUD.BUSYSPINNER_OFF())
  end)
+
+
  --online
- function request_model_load(hash)
-  request_time = os.time()
-  if not STREAMING.IS_MODEL_VALID(hash) then
-      return
-  end
-  STREAMING.REQUEST_MODEL(hash)
-  while not STREAMING.HAS_MODEL_LOADED(hash) do
-      if os.time() - request_time >= 10 then
-          break
-      end
-      util.yield()
-  end
-end
  function playerActionsSetup(pid)
   menu.divider(menu.player_root(pid), "Im Regular User")
   online= menu.list(menu.player_root(pid), "get_edition() >= 2")
